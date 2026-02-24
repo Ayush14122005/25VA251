@@ -1,0 +1,58 @@
+<!--javascript is a cross platform object based scripting language for client and server apllication
+loosely type language ; interpreted at just in time compilalation (runtime)rather than compile time
+high level and multiparadigm language 
+
+js is a scripting language that is used to create and control dynamic website content. It allows developers to add interactivity, manipulate the DOM (Document Object Model), and handle events on web pages. JavaScript can be used for both client-side and server-side development, making it a versatile language for web development. It is widely supported by all modern web browsers and has a large ecosystem of libraries and frameworks that enhance its capabilities.   
+
+js features:
+1. Dynamic typing: JavaScript is a dynamically typed language, which means that variables can hold
+values of any type without the need for explicit type declarations. This allows for flexibility in coding but can also lead to unexpected behavior if not used carefully.
+2. First-class functions: In JavaScript, functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments to other functions, and returned from functions. This allows for powerful functional programming techniques and enables developers to create higher-order functions.
+3. Prototypal inheritance: JavaScript uses prototypal inheritance, which means that
+objects can inherit properties and methods from other objects. This allows for a more flexible and dynamic approach to object-oriented programming compared to classical inheritance.
+4. Event-driven programming: JavaScript is designed to handle events, such as user interactions or server responses. It provides a rich set of event handling mechanisms, allowing developers to create responsive and interactive web applications.
+5. Asynchronous programming: JavaScript supports asynchronous programming through callbacks, promises, and async/
+await syntax. This allows developers to handle time-consuming operations, such as network requests or file I/O, without blocking the main thread of execution, resulting in a smoother user experience.
+6. Cross-platform compatibility: JavaScript is supported by all modern web browsers, making it a
+cross-platform language. It can be used to develop applications for various platforms, including web, mobile, and desktop, using frameworks like React Native and <Electron class="--">
+-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction to JavaScript</title>
+    </head>
+    <body>
+        <h2>JavaScript</h2>
+        <script>
+            // JS variable-------container that keeps either value or not
+            //using var keyword
+            var myName="ABES";
+            //document is javascript is a global object that represent the web
+            document.write(myName);
+            console.log(myName);//local 
+            //JS execution and scope in JS(Global and Local[block])
+            function hello(){
+                var msg="Thanks to visit";
+               // console.log(msg);//globe
+            } 
+            hello();
+
+            //variable declaration using let and const
+
+            let myrollno=2025132;
+            console.log(myrollno);
+
+            myrollno=202513553; // no redeclare but can  reassign
+            console.log(myrollno);
+
+            const myphoneno=8368228011;
+            console.log("my phone no. is"+ myphoneno);
+
+           // myphoneno=11111111;  not redefine and reassign in const
+            console.log(myphoneno);
+        </script>
+        
+    </body>
+    </html>
