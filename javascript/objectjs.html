@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+</head>
+<body>
+    <script>
+       // object in JS: collection of key(properties) and its value
+
+       //create an objects using literal way...
+
+       let student={
+         name:"Ayush",
+       age:20,
+       isMarried:false,
+       address:{streetNo:1,
+        area:"Ganga Vihar",
+        city:"Delhi",
+        Pincode:110094,
+  },
+        course:"Btech",
+        branch:"cse",
+        year:2025,
+        getInfo:function(){
+            return "My education details is" + student.branch + " "+ student.year;
+        },
+        subjects:["Maths","Hindi","Science","English"],
+        examdone:null
+
+
+       };
+      //access object key or property
+      console.log(student.address.Pincode)//object
+      console.log(student.getInfo());//function
+      console.log(student.subjects[2]);//array
+    //    console.log(student);
+    //    console.log(typeof(student));
+    //fin my key in your oject
+    console.log("name" in student);
+
+    //delete any key from object
+    console.log(delete student.anme);
+    console.log(student);
+
+    //find length of objects
+    let keyslength=Object.keys(student);
+    console.log(keyslength.length);
+
+    //iterate objects keys(properties) using for loop
+    for(let i=0;i<keyslength.length;i++){
+        console.log(student[keyslength[i]]);
+
+    }
+    //iterate objects keys(properties) using for.. in loop
+    
+    for(let x in student){
+        console.log(student[x]);
+    }
+
+    //create an objects using new keywords
+    let myInfo= new Object();
+    myInfo.name="Ayush";
+    myInfo.age=20;
+    myInfo.mobile=null;
+    myInfo.city="delhi";
+
+    //access object's keys using []
+    console.log(myInfo["name"]);
+
+
+    </script>
+</body>
+</html>
