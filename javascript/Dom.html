@@ -17,7 +17,17 @@
         <input type="number"  placeholder="enter your age!" id="age" name="age">
         <input type="submit" value="submit" onclick="result()">
       </form>
-<script></script>
+        <script>
+        function result(){
+            let myAge=document.getElementById('age').value; // it will get the value of input field
+            if(myAge>=18){
+                alert("you are eligible to vote");
+            } else {
+                alert("you are not eligible to vote");
+            }
+        }
+    </script>
+
     
     
 </body>
