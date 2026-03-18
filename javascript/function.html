@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in js</title>
+</head>
+<body>
+    <script>
+        //function :- block of code, designed to perform specific task
+        //type of function - with parameter , without parameter and widh default parameter
+        //normal function without parameter 
+
+        function demo(){
+            console.log("hello js");
+        }
+        demo()
+
+        //function calling
+        //function with parameter
+        function demo1(text){
+            console.log("hello"+text);
+        }
+        demo1("react");
+
+        //function with default parameter
+        function add(a,b){
+            var num1=a;
+            var num2=b;
+            var res=num1+num2;
+            console.log("addition of two no. is"+res);
+
+        }
+        add(10);
+        // synchronous and asynchronous
+
+        /*function cal(){
+            function add(a,b){
+                console.log("addition is"+(a+b));
+            }
+        }
+        
+        function sub(x,y){
+            console.log("subtraction is"+(x-y));
+        }
+
+        function mul(p,q){
+            console.log("multiplication is"+(p*q));
+        }
+        add(8,9);
+        sub(9,5);
+        mul(5,4);
+    
+        cal();*/
+
+        // array function with multiple lines
+
+        let msg2=(age)=>
+        {
+            if(age>=18)
+        {
+            console.log("valid age");
+
+        }
+        }
+        msg2(23);
+        
+
+        // anonymous function:a function that does not have an identifier (name) associated with it.
+
+        let msg=function()
+        {
+            console.log("hlo abes");
+        }
+        //short code for above function
+
+        let msg1=()=>console.log("hello react");
+        msg1();
+
+        // call back function
+
+        function cal(a,b,callback)
+        {
+            var num1=a;
+            console.log("first no. is"+num1);
+            var num2=b;
+            console.log("second no."+num2);
+
+            var res=num1+num2;
+            callback(res);
+        }
+       function display(res)
+       {
+        console.log("result is"+res);
+       }
+       cal(15,45,display);
+       
+       // callback using set time out API
+
+       function greeting()
+       {
+        document.writeln("hello student");
+       }
+       function loading()
+       {
+        document.writeln("data loading...");
+       }
+       loading();
+       setTimeout(greeting,2000);
+
+       // JAVA SCRIPT PROMISES
+       //stage of promises
+       //PENDING:OPERATION STARTED(NOT FINISHED)
+       //REJECTED:OPERATION FAILED
+       //FULFILLED:OPERATION COMPLETED
+
+      // java script promises :JavaScript Promises make handling asynchronous operations like API calls, file loading, or time delays easier
+        
+        // promise stages.....
+        // pending:- The initial state of a promise, where the asynchronous operation is still in progress and has not yet completed.
+        // fulfilled:- The state of a promise when the asynchronous operation has completed successfully, and the promise has been resolved with a value.
+        // rejected:- The state of a promise when the asynchronous operation has failed, and the promise has been rejected with a reason (error).   
+
+        let promise=new Promise(function(resolve,reject){
+            let myAge=23;
+            if(myAge>=18){
+                resolve("valid age to vote");
+            } else {
+                reject("wait for next year");
+            }
+        });
+        promise.then(function(result){     // then always return true
+            console.log(result);
+        }).catch(function(error){         // catch always return false
+            console.log(error);
+        });
+
+        //async and await are modern JavaScript keywords (introduced in ES2017) that allow developers to write asynchronous code in a cleaner, more synchronous-like style. 
+
+        // fetch api
+
+        async function userData(){
+            let userResponse=await fetch("https://jsonplaceholder.typicode.com/users");
+            console.log(userResponse);
+            let userDataResponse=await userResponse.json();
+            console.log(userDataResponse)
+        }
+        userData();
+
+        // async await with error handling using try catch block
+         
+          async function productDetail() {
+  try {
+    let proRes = await fetch("https://jsonplaceholder.typicode.com/posts");
+    let proData = await proRes.json();
+    console.log(proData);
+  } catch (error) {
+    console.log("Error fetching product details: " + error);
+  }
+}
+
+productDetail();
+       
+       
+        
+    </script>
+</body>
+</html>
