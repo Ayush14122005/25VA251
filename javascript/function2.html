@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--n JavaScript, the DOM (Document Object Model) is a programming interface 
+    that represents the structure of an HTML or XML document as a tree of objects.It
+    allows JavaScript to access, modify, add, or delete elements and their attributes dynamically.-->
+
+    <h2>Check your age to cast the vote</h2>
+    <form action="">
+        <input type="number" placeholder="Enter your age" name="age" id="age"/>
+        <input type="submit" value="submit" onclick="result()" />
+    </form>
+
+    <input type="text" placeholder="Enter your name " id="inputData"/>
+    <h2 id="text">Display name</h2>
+    <button onclick="changeColor()">click on me</button>
+    <script>
+        /*
+        function result(){
+            let myAge= document.getElementById("age").value;
+            if(myAge>18){
+                alert("You are eligible to vote");
+            }
+            else{
+                alert("You are not eligible to vote");
+            }
+        }
+            */
+
+       function changeColor() {
+            let inputValue=document.getElementById("inputData").value;
+
+            let inputText=document.getElementById('text');
+
+            inputText.innerHTML=inputValue;
+
+            inputText.style.color="red";
+
+            // for random color
+
+            inputText.style.backgroundColor="#"+Math.floor(Math.random() * 1677725).toString(16);
+       }
+
+
+       // TIFE:-An IIFE is a JavaScript function that runs immediately after it is defined.
+// It’s often used to create a private scope and avoid polluting the global namespace.
+         (function() {
+          console.log("This is an IIFE");
+         })();
+
+         // short code for above function
+         (msg=>console.log("An IIFE "))();
+         console.log(typeof(msg));
+
+         //local storage:-Local storage is a web storage mechanism that allows websites to store data in the user's browser. 
+         // It provides a way to save key-value pairs in a web browser with no expiration date, meaning the data persists 
+         // even after the browser is closed and reopened.   
+
+         let myInfo={
+            name:"ayush",
+            age: 20,
+            city: "delhi",
+            mod: 78900345342,
+        };
+
+        // convert obnject into json string
+        let myInfoData=JSON.stringify(myInfo);
+
+        // set the data
+        localStorage.setItem('prefrences',myInfoData);
+
+        // get data
+        let myprefrences=localStorage.getItem('prefrences');
+
+        // retreive the data and convert into JSON object
+        let myInfopre=JSON.parse(myprefrences);
+
+        // access keys
+        console.log(myInfopre.name);
+
+
+            
+    </script>
+</body>
+</body>
+</html>
